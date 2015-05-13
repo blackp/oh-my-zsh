@@ -29,3 +29,11 @@ plugins=(git redis-cli sublime)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+
+export EDITOR="subl -w"
+alias gx="open -a GitX ."
+alias x="open -a Xcode ."
+alias gcam="git commit -am"
+alias gs="git status"
+alias st=subl
+
