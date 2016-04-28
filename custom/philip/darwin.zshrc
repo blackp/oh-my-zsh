@@ -41,3 +41,16 @@ alias gcam="git commit -am"
 alias gs="git status"
 alias st=subl
 
+function cache_defaults {
+	KEY=${1:-all}
+	CACHE_PATH="/tmp/$KEY.defaults_cache.plist"
+	echo saving $KEY defaults to $CACHE_PATH
+	defaults read $1 > $CACHE_PATH
+}
+
+function compare_defaults {
+	KEY=${1:-all}
+	CACHE_PATH="/tmp/$KEY.defaults_cache.plist"
+	echo diff $KEY defaults with $CACHE_PATH
+	defaults read $1 | diff - $CACHE_PATH
+}
