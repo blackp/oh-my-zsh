@@ -30,8 +30,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-export GEM_HOME=$HOME/Software/ruby
-export PATH=$PATH:$HOME/Software/ruby/bin
+export GEM_HOME=$HOME/src/ruby
+export PATH=$PATH:$HOME/src/ruby/bin
 
 export EDITOR="subl -w"
 alias gx="open -a GitX ."
